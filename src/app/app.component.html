@@ -1,10 +1,12 @@
 <main class="main">
   <header>
-    <div class="user">
-      <img src="assets/student-avatar.jpg" class="avatar" />
-      Hello Lynn!
+    <div class="max-width-container">
+      <div class="user">
+        <img src="assets/student-avatar.jpg" class="avatar" />
+        Hello Lynn!
+      </div>
+      <app-search (search)="search($event)"></app-search>
     </div>
-    <app-search (search)="search($event)"></app-search>
   </header>
   <div class="content" *ngIf="!!query; else home">
     <h1> Search result for {{query | json}}</h1>

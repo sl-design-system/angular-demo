@@ -8,6 +8,7 @@
   --sl-color-palette-neutral-base: rgb(34 34 34);
   --sl-color-palette-accent-base: rgb(51 102 255);
   --sl-color-palette-primary-base: rgb(34 34 34);
+  --_max-content-width: 700px;
 
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
@@ -32,17 +33,27 @@ main {
 .content {
   align-self: center;
   width: 100%;
-  max-width: 700px;
-  margin-bottom: 3rem;
+  max-width: var(--_max-content-width);
+  margin-bottom: 5rem;
 }
 
 header {
   background-color: var(--sl-color-palette-accent-base);
-  display: flex;
   position: sticky;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  z-index: 1;
+}
+
+.max-width-container {
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem;
+  width: 100%;
+  max-width: var(--_max-content-width);
+
 }
 
 .user {
