@@ -25,6 +25,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@sl-design-system/sanoma-learning/all.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -84,6 +85,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@sl-design-system/sanoma-learning/all.css",
               "src/styles.css"
             ],
             "scripts": []
