@@ -1657,6 +1657,11 @@
     read-package-json-fast "^3.0.0"
     which "^4.0.0"
 
+"@oddbird/popover-polyfill@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@oddbird/popover-polyfill/-/popover-polyfill-0.4.0.tgz#abba79014e670b6d95451512b29afca99eab571a"
+  integrity sha512-jrqoTI8lk5UziDsDPJ2Y+nmXYCcRhmr6uMARr3v/W6AMxRgsnRLWJyWKYr6FjaGMgbyxXG+OkCUPQY4Xl3toGg==
+
 "@pkgjs/parseargs@^0.11.0":
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/@pkgjs/parseargs/-/parseargs-0.11.0.tgz#a77ea742fab25775145434eb1d2328cf5013ac33"
@@ -1700,6 +1705,13 @@
     "@sigstore/protobuf-specs" "^0.2.1"
     tuf-js "^2.1.0"
 
+"@sl-design-system/angular@^0.1.5":
+  version "0.1.5"
+  resolved "https://npm.pkg.github.com/download/@sl-design-system/angular/0.1.5/455793d1ce43e1516edc0959ef638364ea724a73#455793d1ce43e1516edc0959ef638364ea724a73"
+  integrity sha512-B1XpVtmY+9ASCBWtKMU0GnnQfRs/6229Ce+MNs8Q2Hh7oe/rNKmpdZ9qkBI5ri75kBTvnp+r1LuSMzSeRF7BEw==
+  dependencies:
+    tslib "^2.3.0"
+
 "@sl-design-system/button@^0.0.15":
   version "0.0.15"
   resolved "https://npm.pkg.github.com/download/@sl-design-system/button/0.0.15/eb57a1031e7217cd019dbe64a423fd1db6203d35#eb57a1031e7217cd019dbe64a423fd1db6203d35"
@@ -1708,6 +1720,21 @@
     "@sl-design-system/shared" "0.2.0"
     lit "^3.1.0"
 
+"@sl-design-system/checkbox@^0.0.24":
+  version "0.0.24"
+  resolved "https://npm.pkg.github.com/download/@sl-design-system/checkbox/0.0.24/00d238408b0cfcb14dbf7e5f214c1ecfa758a68a#00d238408b0cfcb14dbf7e5f214c1ecfa758a68a"
+  integrity sha512-rx1WFSjSwjk+PtwQ0ZcynNn+Hl770WiDui8rbhzU9XqJZkrc8KfJewYAPtW+NM2RGkgeiVbr7npiKTPAb2YkPw==
+  dependencies:
+    "@sl-design-system/form" "0.0.10"
+    "@sl-design-system/shared" "0.2.6"
+
+"@sl-design-system/form@0.0.10", "@sl-design-system/form@^0.0.10":
+  version "0.0.10"
+  resolved "https://npm.pkg.github.com/download/@sl-design-system/form/0.0.10/e8e2231fce2228cb4b4f85ef70734cdfcb8a6636#e8e2231fce2228cb4b4f85ef70734cdfcb8a6636"
+  integrity sha512-JORZ7pmTgJMt8xIg5CJF9rbmISA1urXWdh2ydPT+0w90q5oLl/YfDqHJ8C4pZ/5SbOMgtrYTBmarPRdhOfGy/g==
+  dependencies:
+    "@sl-design-system/shared" "0.2.6"
+
 "@sl-design-system/icon@0.0.5":
   version "0.0.5"
   resolved "https://npm.pkg.github.com/download/@sl-design-system/icon/0.0.5/e55c15a713d2904ff51f11942716efbdf60b74c7#e55c15a713d2904ff51f11942716efbdf60b74c7"
@@ -1715,12 +1742,34 @@
   dependencies:
     lit "^3.1.0"
 
+"@sl-design-system/icon@0.0.9":
+  version "0.0.9"
+  resolved "https://npm.pkg.github.com/download/@sl-design-system/icon/0.0.9/163085d034e4e81d9abb9b779adac2331aef40c3#163085d034e4e81d9abb9b779adac2331aef40c3"
+  integrity sha512-kY+2zOsV7vAuRetv9vFeQ/8/z/uz1JxZQxMzO0cTb+NVdICltRJHobusYbVoL1JW005lD7dibS3honT36wyMWA==
+
+"@sl-design-system/radio-group@^0.0.23":
+  version "0.0.23"
+  resolved "https://npm.pkg.github.com/download/@sl-design-system/radio-group/0.0.23/c3f4120387404a244c9ab7f2b05e56d1f5d7989b#c3f4120387404a244c9ab7f2b05e56d1f5d7989b"
+  integrity sha512-ehBFbQuB5ExYfW8NrPvNjPgFKP0gww7MzH0UkyuKIKTvshtZVWpppVgongJVJPExBJGogBDfOXoCsnR2C7lYqg==
+  dependencies:
+    "@sl-design-system/form" "0.0.10"
+    "@sl-design-system/shared" "0.2.6"
+
 "@sl-design-system/sanoma-learning@^0.1.0":
   version "0.1.0"
   resolved "https://npm.pkg.github.com/download/@sl-design-system/sanoma-learning/0.1.0/3b4a5d6b5bc436aec881e4b1041621ba3ab82608#3b4a5d6b5bc436aec881e4b1041621ba3ab82608"
   integrity sha512-KY1cHFePhvRLPHmU1k5XGO1CyaP8s2/1nd/Qm5SfmEao8InxGL9PJZce7snYv3DaSlEO+Yk4SQA5mjgtb5+fpA==
   dependencies:
     "@sl-design-system/icon" "0.0.5"
+
+"@sl-design-system/select@^0.0.23":
+  version "0.0.23"
+  resolved "https://npm.pkg.github.com/download/@sl-design-system/select/0.0.23/e9e0e08345fae0cef08c882856e22a2b1af9f4c3#e9e0e08345fae0cef08c882856e22a2b1af9f4c3"
+  integrity sha512-65BlLcheG2GXbian/TCyuiZX5W6rxG4Jf1Oh4rmFApm+QUAT11zpfENxznPTMdE6JhV6/6hGyRGqB1asxdWJLQ==
+  dependencies:
+    "@sl-design-system/form" "0.0.10"
+    "@sl-design-system/icon" "0.0.9"
+    "@sl-design-system/shared" "0.2.6"
 
 "@sl-design-system/shared@0.2.0":
   version "0.2.0"
@@ -1730,6 +1779,29 @@
     "@floating-ui/dom" "^1.5.3"
     "@lit/localize" "^0.12.1"
     lit "^3.1.0"
+
+"@sl-design-system/shared@0.2.6":
+  version "0.2.6"
+  resolved "https://npm.pkg.github.com/download/@sl-design-system/shared/0.2.6/2a119e362149cc980f5c7528bcd9e000f47647be#2a119e362149cc980f5c7528bcd9e000f47647be"
+  integrity sha512-9/RENTBFeEMqvX9nNcvKXUU6fdJMekdMEdJ1pHpuZuheZDzcKALOmBfKVSKY/+tUyZs8PxP8Tyk8H0rmUrpkEg==
+
+"@sl-design-system/switch@^0.0.17":
+  version "0.0.17"
+  resolved "https://npm.pkg.github.com/download/@sl-design-system/switch/0.0.17/776716a57e661a1bdeb90463c7025d3995d4a140#776716a57e661a1bdeb90463c7025d3995d4a140"
+  integrity sha512-s3AP7oYrBTuUDLNTV1MAC+75K0BipXPp5Smr9nGzvdS4UTiaC1MIQHyuanz21fYti50DKee+cz6hojC2aWW1pg==
+  dependencies:
+    "@sl-design-system/form" "0.0.10"
+    "@sl-design-system/icon" "0.0.9"
+    "@sl-design-system/shared" "0.2.6"
+
+"@sl-design-system/text-field@^0.1.19":
+  version "0.1.19"
+  resolved "https://npm.pkg.github.com/download/@sl-design-system/text-field/0.1.19/4c44dff74be43749e78bc6c4850614f528814202#4c44dff74be43749e78bc6c4850614f528814202"
+  integrity sha512-L6NZ5zNbuCjal483qanHE3tZFTGbmzrR9s1e0DzeBExfjubyGvLFOMmCZ56ZGeJbM0yvKuBtBPkOmQPipG2VCA==
+  dependencies:
+    "@sl-design-system/form" "0.0.10"
+    "@sl-design-system/icon" "0.0.9"
+    "@sl-design-system/shared" "0.2.6"
 
 "@socket.io/component-emitter@~3.1.0":
   version "3.1.0"
@@ -2061,6 +2133,11 @@
   dependencies:
     "@webassemblyjs/ast" "1.11.6"
     "@xtuc/long" "4.2.2"
+
+"@webcomponents/scoped-custom-element-registry@^0.0.9":
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/@webcomponents/scoped-custom-element-registry/-/scoped-custom-element-registry-0.0.9.tgz#dd6ea3378bfeaea64d0c7542120e0ffd17b48b0e"
+  integrity sha512-4RVHwN9oIp23mhrxeDbP9/0wvdcrB0d/MFMqIStShIgfzsqXZXf1OdU5kvqjgdMYavQ5Zm8C6BuBcAjzNwAetQ==
 
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"

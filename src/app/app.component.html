@@ -8,13 +8,50 @@
       <app-search (search)="search($event)"></app-search>
     </div>
   </header>
-  <div class="content" *ngIf="!!query; else home">
+  <div class="content">
+    <div *ngIf="!!query; else home">
     <h1> Search result for {{query | json}}</h1>
     <ng-container *ngFor="let result of results">
       <div class="skeleton"></div>
       <div class="skeleton"></div>
       <div class="skeleton" style="--w:40%; --m:3rem"></div>
     </ng-container>
+    </div>
+    <sl-form [formGroup]="formGroup">
+      <sl-form-field label="Text field">
+        <sl-text-field formControlName="textField"></sl-text-field>
+      </sl-form-field>
+
+      <sl-form-field label="Checkbox">
+        <sl-checkbox formControlName="checkbox" value="checked">Checkbox</sl-checkbox>
+      </sl-form-field>
+
+      <sl-form-field label="Select">
+        <sl-select formControlName="select">
+          <sl-select-option value="1">Option 1</sl-select-option>
+          <sl-select-option value="2">Option 2</sl-select-option>
+          <sl-select-option value="3">Option 3</sl-select-option>
+        </sl-select>
+      </sl-form-field>
+
+      <sl-form-field label="Checkbox group">
+        <sl-checkbox-group formControlName="checkboxGroup">
+          <sl-checkbox value="0">One</sl-checkbox>
+          <sl-checkbox value="1">Two</sl-checkbox>
+          <sl-checkbox value="2">Three</sl-checkbox>
+        </sl-checkbox-group>
+      </sl-form-field>
+
+      <sl-form-field label="Radio group">
+        <sl-radio-group formControlName="radioGroup">
+          <sl-radio value="1">One</sl-radio>
+          <sl-radio value="2">Two</sl-radio>
+          <sl-radio value="3">Three</sl-radio>
+        </sl-radio-group>
+      </sl-form-field>
+    </sl-form>
+
+    <pre>{{ formGroup.value | json }}</pre>
   </div>
 </main>
 
