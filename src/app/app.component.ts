@@ -4,7 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { SearchComponent } from './search/search.component';
 import {FormControl, FormGroup, FormsModule, ReactiveFormsModule} from "@angular/forms";
 // import {FormsModule} from "@sl-design-system/angular";
-import { FormsModule as CoreFormsModule } from '@sl-design-system/angular';
+import { FormsModule as CoreFormsModule } from './../../../components/packages/angular/src/public-api';//'@sl-design-system/angular';
 
 @Component({
   selector: 'app-root',
