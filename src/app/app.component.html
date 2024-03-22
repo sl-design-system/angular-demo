@@ -23,7 +23,7 @@
       </sl-form-field>
 
       <sl-form-field label="Checkbox">
-        <sl-checkbox formControlName="checkbox" value="checked">Checkbox</sl-checkbox>
+        <sl-checkbox formControlName="checkbox" value="checked" (sl-change)="clickCheckbox($event)">Checkbox</sl-checkbox>
       </sl-form-field>
 
       <sl-form-field label="Select">
@@ -51,7 +51,22 @@
       </sl-form-field>
     </sl-form>
 
+    <sl-form #test [formGroup]="formGroupTest">
+      <h1>New form</h1>
+      <div *ngFor="let item of checkBoxValueList, let i = index">
+        {{i}}
+        {{formGroupTest.value | json}}
+        <sl-form-field>
+          <sl-checkbox formControlName="{{item}}">{{item}}</sl-checkbox>
+        </sl-form-field>
+      </div>
+    </sl-form>
+
+    <sl-button (click)="addFields()">add fields</sl-button>
+
     <pre>{{ formGroup.value | json }}</pre>
+
+    <pre>{{ formGroupTest.value | json }}</pre>
   </div>
 </main>
 
