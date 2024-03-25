@@ -25,6 +25,7 @@ import { FormsModule as CoreFormsModule } from '@sl-design-system/angular';
 export class AppComponent implements OnInit, AfterViewInit {
   query = '';
   results = Array.from(Array(5)).map((_, i) => i );
+  show = false;
 
   @ViewChild('test') contentRef: ElementRef;
 
@@ -59,6 +60,10 @@ export class AppComponent implements OnInit, AfterViewInit {
     // afterRender(() => {
     //   console.log('content height: ' + this.contentRef.nativeElement.scrollHeight);
     // }, {phase: AfterRenderPhase.Read});
+    this.formGroupTest.addControl(
+      'extra',//option,
+      new FormControl(true)
+    )
   }
 
   ngAfterViewInit(): void {
@@ -79,11 +84,16 @@ export class AppComponent implements OnInit, AfterViewInit {
     //     option,
     //     new FormControl(option)
     //   )
-    // });
+    // });    
   }
 
   clickCheckbox(event: Event): void {
     console.log('event', event);
+  }
+
+  showAdditionalField(): void {
+
+    this.show = true;
   }
 
   addFields(): void {

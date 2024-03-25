@@ -60,9 +60,13 @@
           <sl-checkbox formControlName="{{item}}">{{item}}</sl-checkbox>
         </sl-form-field>
       </div>
+        <sl-form-field *ngIf="show">
+          <sl-checkbox formControlName="extra">extra</sl-checkbox>
+        </sl-form-field>
     </sl-form>
 
     <sl-button (click)="addFields()">add fields</sl-button>
+    <sl-button (click)="showAdditionalField()">show more</sl-button>
 
     <pre>{{ formGroup.value | json }}</pre>
 
