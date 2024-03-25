@@ -1,4 +1,5 @@
-<form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
-  <input type="text" id="query" required name="query" formControlName="query">
-  <sl-button type="submit">Search</sl-button>
+<form [formGroup]="searchForm" (ngSubmit)="onSubmit()" role="search">
+  <input type="text" id="query" required name="query" formControlName="query" role="searchbox" aria-label="Search entire website for:">
+  <sl-button type="submit" aria-label="Search"><sl-icon name="fas-magnifying-glass"></sl-icon></sl-button>
 </form>
+ 
