@@ -25,8 +25,9 @@ import { FormsModule as CoreFormsModule } from '@sl-design-system/angular';
 export class AppComponent implements OnInit, AfterViewInit {
   query = '';
   results = Array.from(Array(5)).map((_, i) => i );
+  show = false;
 
-  @ViewChild('test') contentRef: ElementRef;
+  // @ViewChild('test') contentRef: ElementRef;
 
   search(searchForm:{query:string}) {
     this.query = searchForm.query;
@@ -59,11 +60,15 @@ export class AppComponent implements OnInit, AfterViewInit {
     // afterRender(() => {
     //   console.log('content height: ' + this.contentRef.nativeElement.scrollHeight);
     // }, {phase: AfterRenderPhase.Read});
+    this.formGroupTest.addControl(
+      'extra',//option,
+      new FormControl(true)
+    )
   }
 
   ngAfterViewInit(): void {
-    const checkboxes = this.contentRef.nativeElement.querySelectorAll('sl-checkbox') as HTMLElement[];
-    console.log('this.checkBoxValueList after', this.checkBoxValueList, this.contentRef.nativeElement, 'test', checkboxes, this.formGroupTest);
+    // const checkboxes = this.contentRef.nativeElement.querySelectorAll('sl-checkbox') as HTMLElement[];
+    // console.log('this.checkBoxValueList after', this.checkBoxValueList, this.contentRef.nativeElement, 'test', checkboxes, this.formGroupTest);
 
     // checkboxes.forEach((option, idx: number) => {
     //   console.log('option', option, this.checkBoxValueList[idx]);
@@ -86,17 +91,22 @@ export class AppComponent implements OnInit, AfterViewInit {
     console.log('event', event);
   }
 
-  addFields(): void {
-    const checkboxes = this.contentRef.nativeElement.querySelectorAll('sl-checkbox') as Element[];
-    console.log('this.checkBoxValueList after', this.checkBoxValueList, this.contentRef.nativeElement, 'test', checkboxes);
+  showAdditionalField(): void {
 
-    checkboxes.forEach((option, idx: number) => {
-      console.log('option', option, this.checkBoxValueList[idx]);
-      this.formGroupTest.addControl(
-        this.checkBoxValueList[idx],//option,
-        new FormControl(true)
-      )
-      console.log('this.formGroupTest', this.formGroupTest);
+    this.show = true;
+  }
+
+  addFields(): void {
+    // const checkboxes = this.contentRef.nativeElement.querySelectorAll('sl-checkbox') as Element[];
+    // console.log('this.checkBoxValueList after', this.checkBoxValueList, this.contentRef.nativeElement, 'test', checkboxes);
+
+    // checkboxes.forEach((option, idx: number) => {
+    //   console.log('option', option, this.checkBoxValueList[idx]);
+    //   this.formGroupTest.addControl(
+    //     this.checkBoxValueList[idx],//option,
+    //     new FormControl(true)
+    //   )
+    //   console.log('this.formGroupTest', this.formGroupTest);
       // const control = this.formGroupTest.get(this.checkBoxValueList[idx]);
       // if (control) {
       //   control.setValidators([Validators.required]); // Add your desired validators
@@ -105,7 +115,7 @@ export class AppComponent implements OnInit, AfterViewInit {
       // checkboxes.forEach(option => {
       //   checkboxArray.push(new FormControl(false)); // Initialize with false
       // });
-    });
+    // });
 
     // checkboxes.forEach((option, idx: number) => {
     //   option.setC
@@ -113,6 +123,6 @@ export class AppComponent implements OnInit, AfterViewInit {
 
    // this.ref.detectChanges();
 
-    console.log('this.checkBoxValueList after_2', this.checkBoxValueList, this.contentRef.nativeElement, 'test', checkboxes as HTMLElement[]);
+    // console.log('this.checkBoxValueList after_2', this.checkBoxValueList, this.contentRef.nativeElement, 'test', checkboxes as HTMLElement[]);
   }
 }

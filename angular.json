@@ -25,7 +25,7 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@sl-design-system/sanoma-learning/all.css",
+              "./node_modules/@sl-design-system/bingel-int/all.css",
               "src/styles.css"
             ],
             "scripts": []
