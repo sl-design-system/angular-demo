@@ -14,6 +14,8 @@ import '@sl-design-system/radio-group/register.js';
 import '@sl-design-system/text-field/register.js';
 import '@sl-design-system/textarea/register.js';
 import '@sl-design-system/select/register.js';
+import '@sl-design-system/inline-message/register.js';
+import '@sl-design-system/checklist';
 
 bootstrapApplication(AppComponent, appConfig)
   .catch((err) => console.error(err));

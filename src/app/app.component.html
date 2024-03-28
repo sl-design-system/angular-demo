@@ -17,6 +17,12 @@
       <div class="skeleton" style="--w:40%; --m:3rem"></div>
     </ng-container>
     </div>
+    <slds-checkist>test</slds-checkist>
+    <sl-inline-message variant="success">
+      <span slot="title">title</span>
+      test
+      <span slot="details">details</span>
+    </sl-inline-message>
     <sl-form [formGroup]="formGroup">
       <sl-form-field label="Text field">
         <sl-text-field formControlName="textField"></sl-text-field>
@@ -51,19 +57,19 @@
       </sl-form-field>
     </sl-form>
 
-    <sl-form #test [formGroup]="formGroupTest">
-      <h1>New form</h1>
-      <div *ngFor="let item of checkBoxValueList, let i = index">
-        {{i}}
-        {{formGroupTest.value | json}}
-        <sl-form-field>
-          <sl-checkbox formControlName="{{item}}">{{item}}</sl-checkbox>
-        </sl-form-field>
-      </div>
-        <sl-form-field *ngIf="show">
-          <sl-checkbox formControlName="extra">extra</sl-checkbox>
-        </sl-form-field>
-    </sl-form>
+<!--    <sl-form #test [formGroup]="formGroupTest">-->
+<!--      <h1>New form</h1>-->
+<!--      <div *ngFor="let item of checkBoxValueList, let i = index">-->
+<!--        {{i}}-->
+<!--        {{formGroupTest.value | json}}-->
+<!--        <sl-form-field>-->
+<!--          <sl-checkbox formControlName="{{item}}">{{item}}</sl-checkbox>-->
+<!--        </sl-form-field>-->
+<!--      </div>-->
+<!--        <sl-form-field *ngIf="show">-->
+<!--          <sl-checkbox formControlName="extra">extra</sl-checkbox>-->
+<!--        </sl-form-field>-->
+<!--    </sl-form>-->
 
     <sl-button (click)="addFields()">add fields</sl-button>
     <sl-button (click)="showAdditionalField()">show more</sl-button>

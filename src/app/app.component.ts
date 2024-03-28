@@ -27,7 +27,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   results = Array.from(Array(5)).map((_, i) => i );
   show = false;
 
-  @ViewChild('test') contentRef: ElementRef;
+  // @ViewChild('test') contentRef: ElementRef;
 
   search(searchForm:{query:string}) {
     this.query = searchForm.query;
@@ -67,8 +67,8 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    const checkboxes = this.contentRef.nativeElement.querySelectorAll('sl-checkbox') as HTMLElement[];
-    console.log('this.checkBoxValueList after', this.checkBoxValueList, this.contentRef.nativeElement, 'test', checkboxes, this.formGroupTest);
+    // const checkboxes = this.contentRef.nativeElement.querySelectorAll('sl-checkbox') as HTMLElement[];
+    // console.log('this.checkBoxValueList after', this.checkBoxValueList, this.contentRef.nativeElement, 'test', checkboxes, this.formGroupTest);
 
     // checkboxes.forEach((option, idx: number) => {
     //   console.log('option', option, this.checkBoxValueList[idx]);
@@ -84,7 +84,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     //     option,
     //     new FormControl(option)
     //   )
-    // });    
+    // });
   }
 
   clickCheckbox(event: Event): void {
@@ -97,8 +97,8 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   addFields(): void {
-    const checkboxes = this.contentRef.nativeElement.querySelectorAll('sl-checkbox') as Element[];
-    console.log('this.checkBoxValueList after', this.checkBoxValueList, this.contentRef.nativeElement, 'test', checkboxes);
+    // const checkboxes = this.contentRef.nativeElement.querySelectorAll('sl-checkbox') as Element[];
+    // console.log('this.checkBoxValueList after', this.checkBoxValueList, this.contentRef.nativeElement, 'test', checkboxes);
 
     checkboxes.forEach((option, idx: number) => {
       console.log('option', option, this.checkBoxValueList[idx]);
@@ -123,6 +123,6 @@ export class AppComponent implements OnInit, AfterViewInit {
 
    // this.ref.detectChanges();
 
-    console.log('this.checkBoxValueList after_2', this.checkBoxValueList, this.contentRef.nativeElement, 'test', checkboxes as HTMLElement[]);
+    // console.log('this.checkBoxValueList after_2', this.checkBoxValueList, this.contentRef.nativeElement, 'test', checkboxes as HTMLElement[]);
   }
 }
