@@ -100,13 +100,13 @@ export class AppComponent implements OnInit, AfterViewInit {
     // const checkboxes = this.contentRef.nativeElement.querySelectorAll('sl-checkbox') as Element[];
     // console.log('this.checkBoxValueList after', this.checkBoxValueList, this.contentRef.nativeElement, 'test', checkboxes);
 
-    checkboxes.forEach((option, idx: number) => {
-      console.log('option', option, this.checkBoxValueList[idx]);
-      this.formGroupTest.addControl(
-        this.checkBoxValueList[idx],//option,
-        new FormControl(true)
-      )
-      console.log('this.formGroupTest', this.formGroupTest);
+    // checkboxes.forEach((option, idx: number) => {
+    //   console.log('option', option, this.checkBoxValueList[idx]);
+    //   this.formGroupTest.addControl(
+    //     this.checkBoxValueList[idx],//option,
+    //     new FormControl(true)
+    //   )
+    //   console.log('this.formGroupTest', this.formGroupTest);
       // const control = this.formGroupTest.get(this.checkBoxValueList[idx]);
       // if (control) {
       //   control.setValidators([Validators.required]); // Add your desired validators
@@ -115,7 +115,7 @@ export class AppComponent implements OnInit, AfterViewInit {
       // checkboxes.forEach(option => {
       //   checkboxArray.push(new FormControl(false)); // Initialize with false
       // });
-    });
+    // });
 
     // checkboxes.forEach((option, idx: number) => {
     //   option.setC

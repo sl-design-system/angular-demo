@@ -3,7 +3,8 @@ import '@webcomponents/scoped-custom-element-registry/scoped-custom-element-regi
 import { bootstrapApplication } from '@angular/platform-browser';
 import { appConfig } from './app/app.config';
 import { AppComponent } from './app/app.component';
-import { setup } from '@sl-design-system/sanoma-learning';
+// import { setup } from '@sl-design-system/sanoma-learning';
+import { setup } from '@sl-design-system/bingel-int';
 // import '@sl-design-system/shared/index.js';
 // import '@sl-design-system/shared/src/events.js';
 import '@sl-design-system/button/register.js';
@@ -15,7 +16,7 @@ import '@sl-design-system/text-field/register.js';
 import '@sl-design-system/textarea/register.js';
 import '@sl-design-system/select/register.js';
 import '@sl-design-system/inline-message/register.js';
-import '@sl-design-system/checklist';
+// import '@sl-design-system/checklist';
 
 bootstrapApplication(AppComponent, appConfig)
   .catch((err) => console.error(err));
