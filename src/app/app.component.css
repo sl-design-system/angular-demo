@@ -10,24 +10,18 @@
   --sl-color-palette-primary-base: rgb(34 34 34);
   --_max-content-width: 700px;
 
+  align-items: stretch;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   font-family: source-sans-pro, "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-main {
-  width: 100%;
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
+  gap: 2em;
+  inline-size: 100%;
   justify-content: flex-start;
-  align-items: stretch;
-  box-sizing: inherit;
+  min-block-size: 100%;
   position: relative;
-  gap: 2em
 }
 
 .content {
@@ -56,17 +50,12 @@ header {
 
 }
 
-.user {
-  font-size: 2rem;
+sl-avatar {
   color: var(--sl-color-palette-white-base);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
 
-.avatar {
-  border-radius: 50%;
-  height: 80px;
+  &::part(name) {
+    font-size: 2rem;
+  }
 }
 
 .skeleton {

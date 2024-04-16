@@ -1,74 +1,69 @@
-<main class="main">
-  <header>
-    <div class="max-width-container">
-      <div class="user">
-        <img src="assets/student-avatar.jpg" class="avatar" />
-        Hello Lynn!
-      </div>
-      <app-search (search)="search($event)"></app-search>
-    </div>
-  </header>
-  <div class="content">
-    <div *ngIf="!!query; else home">
-    <h1> Search result for {{query | json}}</h1>
+<header>
+  <div class="max-width-container">
+    <sl-avatar display-name="Hello Lynn!" picture-url="assets/student-avatar.jpg" size="3xl"></sl-avatar>
+    <app-search (search)="search($event)"></app-search>
+  </div>
+</header>
+<div class="content">
+  <div *ngIf="!!query; else home">
+    <h1>Search result for {{query | json}}</h1>
     <ng-container *ngFor="let result of results">
       <div class="skeleton"></div>
       <div class="skeleton"></div>
       <div class="skeleton" style="--w:40%; --m:3rem"></div>
     </ng-container>
-    </div>
-    <sl-form [formGroup]="formGroup">
-      <sl-form-field label="Text field">
-        <sl-text-field formControlName="textField"></sl-text-field>
-      </sl-form-field>
-
-      <sl-form-field label="Checkbox">
-        <sl-checkbox formControlName="checkbox" value="checked" (sl-change)="clickCheckbox($event)">Checkbox</sl-checkbox>
-      </sl-form-field>
-
-      <sl-form-field label="Select">
-        <sl-select formControlName="select">
-          <sl-select-option value="1">Option 1</sl-select-option>
-          <sl-select-option value="2">Option 2</sl-select-option>
-          <sl-select-option value="3">Option 3</sl-select-option>
-        </sl-select>
-      </sl-form-field>
-
-      <sl-form-field label="Checkbox group">
-        <sl-checkbox-group formControlName="checkboxGroup">
-          <sl-checkbox value="0">One</sl-checkbox>
-          <sl-checkbox value="1">Two</sl-checkbox>
-          <sl-checkbox value="2">Three</sl-checkbox>
-        </sl-checkbox-group>
-      </sl-form-field>
-
-      <sl-form-field label="Radio group">
-        <sl-radio-group formControlName="radioGroup">
-          <sl-radio value="1">One</sl-radio>
-          <sl-radio value="2">Two</sl-radio>
-          <sl-radio value="3">Three</sl-radio>
-        </sl-radio-group>
-      </sl-form-field>
-    </sl-form>
-
-    <sl-form #test [formGroup]="formGroupTest">
-      <h1>New form</h1>
-      <div *ngFor="let item of checkBoxValueList, let i = index">
-        {{i}}
-        {{formGroupTest.value | json}}
-        <sl-form-field>
-          <sl-checkbox formControlName="{{item}}">{{item}}</sl-checkbox>
-        </sl-form-field>
-      </div>
-    </sl-form>
-
-    <sl-button (click)="addFields()">add fields</sl-button>
-
-    <pre>{{ formGroup.value | json }}</pre>
-
-    <pre>{{ formGroupTest.value | json }}</pre>
   </div>
-</main>
+
+  <sl-form [formGroup]="formGroup">
+    <sl-form-field label="Text field">
+      <sl-text-field formControlName="textField"></sl-text-field>
+    </sl-form-field>
+
+    <sl-form-field label="Checkbox">
+      <sl-checkbox formControlName="checkbox" value="checked" (sl-change)="clickCheckbox($event)">Checkbox</sl-checkbox>
+    </sl-form-field>
+
+    <sl-form-field label="Select">
+      <sl-select formControlName="select">
+        <sl-select-option value="1">Option 1</sl-select-option>
+        <sl-select-option value="2">Option 2</sl-select-option>
+        <sl-select-option value="3">Option 3</sl-select-option>
+      </sl-select>
+    </sl-form-field>
+
+    <sl-form-field label="Checkbox group">
+      <sl-checkbox-group formControlName="checkboxGroup">
+        <sl-checkbox value="0">One</sl-checkbox>
+        <sl-checkbox value="1">Two</sl-checkbox>
+        <sl-checkbox value="2">Three</sl-checkbox>
+      </sl-checkbox-group>
+    </sl-form-field>
+
+    <sl-form-field label="Radio group">
+      <sl-radio-group formControlName="radioGroup">
+        <sl-radio value="1">One</sl-radio>
+        <sl-radio value="2">Two</sl-radio>
+        <sl-radio value="3">Three</sl-radio>
+      </sl-radio-group>
+    </sl-form-field>
+  </sl-form>
+
+  <sl-form #test [formGroup]="formGroupTest">
+    <h1>Comments</h1>
+    <ul formArrayName="comments">
+      <li *ngFor="let comment of comments.controls, let i = index">
+        <sl-text-field [formControlName]="i"></sl-text-field>
+      </li>
+    </ul>
+
+    <sl-button-bar>
+      <sl-button [attr.disabled]="formGroupTest.invalid || null" (click)="addComment()">Add comment</sl-button>
+    </sl-button-bar>
+  </sl-form>
+
+  <pre>{{ formGroup.value | json }}</pre>
+  <pre>{{ formGroupTest.value | json }}</pre>
+</div>
 
 <ng-template #home>
   <div class="content">
