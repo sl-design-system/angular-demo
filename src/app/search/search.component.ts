@@ -1,22 +1,23 @@
 import { CUSTOM_ELEMENTS_SCHEMA, Component, EventEmitter, Output } from '@angular/core';
-import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormsModule } from '@sl-design-system/angular';
 
 @Component({
   selector: 'app-search',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, FormsModule],
   templateUrl: './search.component.html',
   styleUrl: './search.component.css',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class SearchComponent {
-  @Output() search: EventEmitter<any> = new EventEmitter();
+  @Output() search = new EventEmitter<string>();
 
   searchForm = new FormGroup({
-    query: new FormControl('')
-  })
+    query: new FormControl('', Validators.required),
+  });
 
   onSubmit() {
-    this.search.emit(this.searchForm.value)
+    this.search.emit(this.searchForm.value.query ?? '')
   }
 }

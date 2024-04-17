@@ -1,4 +1,4 @@
 <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
-  <input type="text" id="query" required name="query" formControlName="query">
+  <sl-text-field formControlName="query"></sl-text-field>
   <sl-button type="submit">Search</sl-button>
 </form>
