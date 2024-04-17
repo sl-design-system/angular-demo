@@ -13,6 +13,7 @@ import { SearchComponent } from './search/search.component';
 import { FormArray, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { FormsModule as CoreFormsModule } from '@sl-design-system/angular';
 import '@sl-design-system/avatar/register.js';
+import '@sl-design-system/checklist';
 
 @Component({
   selector: 'app-root',
