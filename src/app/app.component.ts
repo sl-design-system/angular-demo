@@ -11,14 +11,14 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { SearchComponent } from './search/search.component';
 import { FormArray, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { FormsModule as CoreFormsModule } from '@sl-design-system/angular';
+//import { FormsModule as CoreFormsModule } from '@sl-design-system/angular/forms';
 import '@sl-design-system/avatar/register.js';
 import '@sl-design-system/checklist';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, SearchComponent, ReactiveFormsModule, CoreFormsModule, FormsModule],
+  imports: [CommonModule, RouterOutlet, SearchComponent, ReactiveFormsModule, /*CoreFormsModule,*/ FormsModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
@@ -128,3 +128,6 @@ export class AppComponent implements OnInit, AfterViewInit {
   //   console.log('this.checkBoxValueList after_2', this.checkBoxValueList, this.contentRef.nativeElement, 'test', checkboxes as HTMLElement[]);
   // }
 }
+
+
+// TODO: badge is missing in the avatar dependencies in the avatar component
