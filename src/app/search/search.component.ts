@@ -1,14 +1,25 @@
-import { CUSTOM_ELEMENTS_SCHEMA, Component, EventEmitter, Output } from '@angular/core';
-import { FormGroup, FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
-import { FormsModule } from '@sl-design-system/angular';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { FormGroup, FormControl, ReactiveFormsModule, Validators, FormsModule } from '@angular/forms';
+import { TextFieldComponent } from '@sl-design-system/angular/text-field';
+import { ButtonComponent } from '@sl-design-system/angular/button';
+import { FormComponent, FormFieldComponent } from '@sl-design-system/angular/form';
+import { TextFieldDirective } from '@sl-design-system/angular/forms';
+
 
 @Component({
   selector: 'app-search',
   standalone: true,
-  imports: [ReactiveFormsModule, FormsModule],
+  imports: [
+    ReactiveFormsModule, 
+    FormsModule, 
+    TextFieldComponent, 
+    ButtonComponent, 
+    FormComponent,
+    TextFieldDirective,
+    FormFieldComponent
+  ],
   templateUrl: './search.component.html',
-  styleUrl: './search.component.css',
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  styleUrl: './search.component.css'
 })
 export class SearchComponent {
   @Output() search = new EventEmitter<string>();
@@ -18,6 +29,6 @@ export class SearchComponent {
   });
 
   onSubmit() {
-    this.search.emit(this.searchForm.value.query ?? '')
+    this.search.emit(this.searchForm.value.query ?? '');
   }
 }
