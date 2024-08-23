@@ -1,4 +1,6 @@
+<section>
 <sl-form [formGroup]="formGroup">
+    <h1>Example form</h1>
     <sl-form-field label="Text field">
       <sl-text-field formControlName="textField"></sl-text-field>
     </sl-form-field>
@@ -31,12 +33,17 @@
       </sl-radio-group>
     </sl-form-field>
   </sl-form>
+  <pre>{{ formGroup.value | json}}</pre>
+</section>
 
+<section>
   <sl-form #test [formGroup]="formGroupTest">
-    <h1>Comments</h1>
+    <h1>Dynamic form</h1>
     <ul formArrayName="comments">
       <li *ngFor="let comment of comments.controls, let i = index">
+        <sl-form-field [label]="'Comment '+(i+1)">
         <sl-text-field [formControlName]="i"></sl-text-field>
+        </sl-form-field>
       </li>
     </ul>
 
@@ -44,6 +51,5 @@
       <sl-button [attr.disabled]="formGroupTest.invalid || null" (click)="addComment()">Add comment</sl-button>
     </sl-button-bar>
   </sl-form>
-
-  <pre>{{ formGroup.value | json}}</pre>
   <pre>{{ formGroupTest.value | json }}</pre>
+  </section>

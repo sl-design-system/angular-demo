@@ -1,6 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
-import { FormArray, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import {  
+  FormArray,
+  FormControl,
+  FormGroup,
+  FormsModule,
+  ReactiveFormsModule,
+  Validators} from '@angular/forms';
 import { ButtonComponent } from '@sl-design-system/angular/button';
 import { ButtonBarComponent } from '@sl-design-system/angular/button-bar';
 import { FormFieldComponent } from '@sl-design-system/angular/form';
@@ -16,10 +22,10 @@ import { CheckboxComponent, CheckboxGroupComponent } from '@sl-design-system/ang
   imports: [
     ButtonComponent, 
     ButtonBarComponent,
-    CheckboxComponent, 
+    CheckboxComponent,
+    CheckboxDirective,
     CheckboxGroupComponent,
     CheckboxGroupDirective,
-    CheckboxDirective,
     CommonModule,
     FormComponent,
     FormFieldComponent,
@@ -38,13 +44,6 @@ import { CheckboxComponent, CheckboxGroupComponent } from '@sl-design-system/ang
   styleUrl: './form.component.css'
 })
 export class FormComponent implements OnInit, AfterViewInit{
-  checkBoxValueList = [
-    'Reading',
-    'Watching',
-    'Traveling',
-    'Cooking'
-  ];
-
   formGroupTest: FormGroup;
 
   formGroup = new FormGroup({
