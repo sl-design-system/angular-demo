@@ -29,6 +29,8 @@
   width: 100%;
   max-width: var(--_max-content-width);
   margin-bottom: 5rem;
+  display: flex;
+  gap: 20px;
 }
 
 header {
@@ -67,4 +69,10 @@ sl-avatar {
   width: var(--w, 100%);
   margin-bottom: var(--m, 0.5rem);
   border-radius: 4px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }

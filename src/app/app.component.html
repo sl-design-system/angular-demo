@@ -5,7 +5,12 @@
   </div>
 </header>
 <div class="content">
-  <app-form></app-form>
+  <nav>
+    <a routerLink="" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
+    <a routerLink="/form" routerLinkActive="active" ariaCurrentWhenActive="page">Form</a>
+    <a routerLink="/icons" routerLinkActive="active" ariaCurrentWhenActive="page">Icons</a>
+  </nav>
+
   <div *ngIf="!!query; else home">
     <h1>Search result for {{query | json}}</h1>
     <ng-container *ngFor="let result of results">
@@ -14,10 +19,8 @@
       <div class="skeleton" style="--w:40%; --m:3rem"></div>
     </ng-container>
   </div>
-
-
+  
+  <ng-template #home>
+    <router-outlet></router-outlet>
+  </ng-template>
 </div>
-
-<ng-template #home>
-  <slds-checklist></slds-checklist>
-</ng-template>

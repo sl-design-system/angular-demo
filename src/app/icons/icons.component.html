@@ -1,0 +1,7 @@
+<p><sl-icon name="pinata"></sl-icon> Icon loaded with normal property</p>
+<p><sl-icon [name]="'pinata'"></sl-icon> Icon loaded with Angular binding, using a string</p>
+<p><sl-icon [name]="dynamic"></sl-icon> Icon loaded with Angular binding, using a variable</p>
+<sl-button-bar>
+  <sl-button (click)="preLoaded()">Set to pre-loaded icon</sl-button>
+  <sl-button (click)="loadOnDemand()">Set to icon loaded after click</sl-button>
+</sl-button-bar>
