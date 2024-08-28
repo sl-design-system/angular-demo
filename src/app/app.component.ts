@@ -36,7 +36,6 @@ export class AppComponent {
   
 
   search(query: string) {
-    console.log('this.search', query);
     this.query = query;
   }
 }
