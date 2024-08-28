@@ -19,6 +19,8 @@
     "@angular/platform-browser-dynamic": "^17.3.4",
     "@angular/router": "^17.3.4",
     "@floating-ui/dom": "^1.6.10",
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@lit/localize": "^0.12.2",
     "@oddbird/popover-polyfill": "^0.4.4",
     "@open-wc/scoped-elements": "^3.0.5",
