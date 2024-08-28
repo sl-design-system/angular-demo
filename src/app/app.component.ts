@@ -21,7 +21,6 @@ export class AppComponent {
     private ref: ChangeDetectorRef
   ) {}
   search(query: string) {
-    console.log('this.search', query);
     this.query = query;
   }
 }

@@ -1227,7 +1227,7 @@
   dependencies:
     "@floating-ui/utils" "^0.2.7"
 
-"@floating-ui/dom@^1.6.10", "@floating-ui/dom@^1.6.3":
+"@floating-ui/dom@^1.6.10", "@floating-ui/dom@^1.6.3", "@floating-ui/dom@^1.6.5":
   version "1.6.10"
   resolved "https://registry.npmjs.org/@floating-ui/dom/-/dom-1.6.10.tgz"
   integrity sha512-fskgCFv8J8OamCmyun8MfjB1Olfn+uZKjOKZ0vhYF3gRmEUXcGOjxWL8bBr7i4kIuPZ2KD2S3EUIOxnjC8kl2A==
@@ -1337,12 +1337,12 @@
   resolved "https://registry.npmjs.org/@lit-labs/ssr-dom-shim/-/ssr-dom-shim-1.2.1.tgz"
   integrity sha512-wx4aBmgeGvFmOKucFKY+8VFJSYZxs9poN3SDNQFF6lT6NrQUnHiPB2PWz2sc4ieEcAaYYzN+1uWahEeTq2aRIQ==
 
-"@lit/localize@^0.12.1":
-  version "0.12.1"
-  resolved "https://registry.npmjs.org/@lit/localize/-/localize-0.12.1.tgz"
-  integrity sha512-uuF6OO6fjqomCf3jXsJ5cTGf1APYuN88S4Gvo/fjt9YkG4OMaMvpEUqd5oWhyzrJfY+HcenAbLJNi2Cq3H7gdg==
+"@lit/localize@^0.12.1", "@lit/localize@^0.12.2":
+  version "0.12.2"
+  resolved "https://registry.npmjs.org/@lit/localize/-/localize-0.12.2.tgz"
+  integrity sha512-Qv9kvgJKDq/JVSwXOxuWvQnnOBysHA99ti9im9a4fImCmx+fto+XXcUYQbjZHqiueEEc4V20PcRDPO+1g/6seQ==
   dependencies:
-    lit "^2.0.0 || ^3.0.0"
+    lit "^3.2.0"
 
 "@lit/reactive-element@^2.0.4":
   version "2.0.4"
@@ -1546,20 +1546,21 @@
     "@sigstore/core" "^1.1.0"
     "@sigstore/protobuf-specs" "^0.3.1"
 
-"@sl-design-system/angular@0.0.0-20240822115338":
-  version "0.0.0-20240822115338"
-  resolved "https://npm.pkg.github.com/download/@sl-design-system/angular/0.0.0-20240822115338/1243c40e5c27746b1b76720aec4a977ef12ef7e9"
-  integrity sha512-S6iDkLQwpPtht6lqUPSSDdskFad7fQovT+ZrpV4KpRt8qWdwsR7h3fLGNmekNXLAV5tjKXKgWsIfmGoHeih/Fg==
+"@sl-design-system/angular@2.0.0":
+  version "2.0.0"
+  resolved "https://npm.pkg.github.com/download/@sl-design-system/angular/2.0.0/31450f834593bb9b4feeafe1f826616d9a9c520a"
+  integrity sha512-2/06Oadlo3J/sXcsMtJnhq6un7RznJBwCpb7/8VVZbRuZyfW0CzyF4+HrhzmxKP9mjc3R1/5rts8EvdBKIGHtg==
   dependencies:
     tslib "^2.3.0"
 
-"@sl-design-system/avatar@^1.0.1":
-  version "1.0.1"
-  resolved "https://npm.pkg.github.com/download/@sl-design-system/avatar/1.0.1/b8d5c4264d824e4fa0ae94c4178769bd9d2a7221"
-  integrity sha512-1Hm3W5o5aX4ODFeCST665L/EgENxwmeHkGZygTDsXGDfW0xkoqfqU0iP31O0Ixo+h+tGSCIn/az3GQt7xoIuGQ==
+"@sl-design-system/avatar@^1.0.2":
+  version "1.0.2"
+  resolved "https://npm.pkg.github.com/download/@sl-design-system/avatar/1.0.2/3fc2ccbe21a69f3d0a3f76cbbf7b1ad26bd36e5b"
+  integrity sha512-lajjZREqvMA0joYJJqBan4SG5eRDdR0enA2fYyrUR6j1eNS9tfbICVB1Mb4w5qOV3lBec79tW9idHzalWAgmBw==
   dependencies:
-    "@sl-design-system/shared" "^0.2.13"
-    "@sl-design-system/tooltip" "^1.0.1"
+    "@sl-design-system/badge" "^1.0.0"
+    "@sl-design-system/shared" "^0.3.0"
+    "@sl-design-system/tooltip" "^1.1.0"
 
 "@sl-design-system/badge@^1.0.0":
   version "1.0.0"
@@ -1573,33 +1574,33 @@
   dependencies:
     "@sl-design-system/button" "^1.0.2"
 
-"@sl-design-system/button@^1.0.0", "@sl-design-system/button@^1.0.2":
-  version "1.0.2"
-  resolved "https://npm.pkg.github.com/download/@sl-design-system/button/1.0.2/040d3542731ae37baa804a32ef28a93d6998b6a2"
-  integrity sha512-F27W5m/8befhzEtDW7e5voZEG4VVuuQByxvdtSStc50JfbqLxrQIzFZ2xGGGSm0CHRG/EngCEkfBmokxKPnOVw==
+"@sl-design-system/button@^1.0.2", "@sl-design-system/button@^1.0.3":
+  version "1.0.3"
+  resolved "https://npm.pkg.github.com/download/@sl-design-system/button/1.0.3/28bd17c4a8518e8b4a5f73d95a03f864b954bf9b"
+  integrity sha512-AC7rbRh4DBJdOzMi67QJNN0n5ZYrGSUBI6qYC3gxMgd/9bL/yNmf+Zh0JcE7Q3O1j+y2NG33mn53kPuDINiD0A==
   dependencies:
-    "@sl-design-system/shared" "^0.2.13"
+    "@sl-design-system/shared" "^0.3.0"
 
-"@sl-design-system/checkbox@*", "@sl-design-system/checkbox@0.0.0-20240822115338":
-  version "0.0.0-20240822115338"
-  resolved "https://npm.pkg.github.com/download/@sl-design-system/checkbox/0.0.0-20240822115338/477fa7dfc0f310bdc6e942a489be5731a262ab3e"
-  integrity sha512-AqJYR5XGtKkaCg0VCUwmFnTrbB7TjyzOC7tdzLY5FOZLEOPe29E+lJ21a4a4FXx89/8/9TYsbRyDZB6ygw5DVQ==
+"@sl-design-system/checkbox@2.0.0":
+  version "2.0.0"
+  resolved "https://npm.pkg.github.com/download/@sl-design-system/checkbox/2.0.0/814f8c60cef60e2bfb53d647271195227f093283"
+  integrity sha512-QoUbjELleNuCFyeQi0jfGcjBVGddcgy0ZaCl0ntdNkkcHZiKpL9RKLA+evZGayu3pRw7lUN3gt4Z8osZPYbiQw==
   dependencies:
-    "@sl-design-system/form" "^1.0.2"
-    "@sl-design-system/shared" "^0.2.13"
+    "@sl-design-system/form" "^1.0.3"
+    "@sl-design-system/shared" "^0.3.0"
 
 "@sl-design-system/checklist@^0.0.2":
   version "0.0.2"
   resolved "https://npm.pkg.github.com/download/@sl-design-system/checklist/0.0.2/b5ab326468b3f65f02ac32e452f1edae6aed31f7"
   integrity sha512-/aDT5xW8qO09uvgMxhg8AUkJhSYdMlKdzv33UJVrrnf5i8C2mpJ0cnwr+MbHIGP+hNBHTaoNDNvtXITwb6jpgA==
 
-"@sl-design-system/form@*", "@sl-design-system/form@^1.0.0", "@sl-design-system/form@^1.0.2":
-  version "1.0.2"
-  resolved "https://npm.pkg.github.com/download/@sl-design-system/form/1.0.2/c6e6015dbee15ff5234c857d32fbf49d44c2e484"
-  integrity sha512-360mtuaJWDBBiLC+Jj+194FwiZ+kqXWCSjGPH0SVEeuEme5E7Hpe78P68gZni83YISX4+kZJSHddaj0KW7SITw==
+"@sl-design-system/form@^1.0.3", "@sl-design-system/form@1.0.3":
+  version "1.0.3"
+  resolved "https://npm.pkg.github.com/download/@sl-design-system/form/1.0.3/d710a6f70787223d152d369022ebedd6d4ea2c01"
+  integrity sha512-04WPJq6dPmAmIwQzUbMbXOreej3WdGTc7PcVHskgKBCWyMANLq/jDgNuHl5J/VC65nFRHUoA4aXSriM34/bkLw==
   dependencies:
-    "@sl-design-system/inline-message" "^1.0.0"
-    "@sl-design-system/shared" "^0.2.12"
+    "@sl-design-system/inline-message" "^1.0.1"
+    "@sl-design-system/shared" "^0.3.0"
 
 "@sl-design-system/form@0.0.15":
   version "0.0.15"
@@ -1608,84 +1609,85 @@
   dependencies:
     "@sl-design-system/shared" "0.2.11"
 
-"@sl-design-system/icon@*", "@sl-design-system/icon@^1.0.0", "@sl-design-system/icon@1.0.1", "@sl-design-system/icon@file:../design-system/packages/components/icon":
-  version "1.0.1"
-  resolved "file:../design-system/packages/components/icon"
+"@sl-design-system/icon@^1.0.2", "@sl-design-system/icon@1.0.2":
+  version "1.0.2"
+  resolved "https://npm.pkg.github.com/download/@sl-design-system/icon/1.0.2/704291557823654d48717a43ba0c9a461dd0ce5f"
+  integrity sha512-+HV3SFCgy8tSUPlPDiEIY0oNP1R8UY3LZuG0F8xbqnziu1yLCTZ3xFGTp0AADtGrSffa7rM29Tza15599i4nXw==
 
 "@sl-design-system/icon@0.0.10":
   version "0.0.10"
   resolved "https://npm.pkg.github.com/download/@sl-design-system/icon/0.0.10/4281e1ab68db2794adbacc8f133ff3453cfb2092"
   integrity sha512-/wfn5Lmi5BFfpcTIDNhGxi2+yoF7GbVfx681gAzmDg7FMzbY1B71BoKUZE6kLGFXleHyfcALHerWIMExYQ6bfw==
 
-"@sl-design-system/inline-message@^1.0.0":
-  version "1.0.0"
-  resolved "https://npm.pkg.github.com/download/@sl-design-system/inline-message/1.0.0/459defa5d099cdbea53d20faf9059773747cdf4b"
-  integrity sha512-FcrHNWCU3C+RIGolwn/Hu9TJxVzbouRMAReTSTUoJip6YSovQQfr8bk6SviOgndKaADBAYXyeiZyO6N9SbDLfA==
-  dependencies:
-    "@sl-design-system/button" "^1.0.0"
-    "@sl-design-system/icon" "^1.0.0"
-    "@sl-design-system/shared" "^0.2.12"
-
-"@sl-design-system/radio-group@*", "@sl-design-system/radio-group@^1.0.0":
-  version "1.0.0"
-  resolved "https://npm.pkg.github.com/download/@sl-design-system/radio-group/1.0.0/52fa3df512034e53bee4f760ce359d1b34a2ffc0"
-  integrity sha512-UGnxigyjPbvduVLOUuJhX+fKNtnQ7c/fO9EkyAbNmPVAKTac2n8XS2pT5P1EX6RW1qgi98cuH3yOgro920EFMQ==
-  dependencies:
-    "@sl-design-system/form" "^1.0.0"
-    "@sl-design-system/shared" "^0.2.11"
-
-"@sl-design-system/sanoma-learning@^0.3.9":
-  version "0.3.9"
-  resolved "https://npm.pkg.github.com/download/@sl-design-system/sanoma-learning/0.3.9/8845db83a5bfccfa975d6495398f8241a81edc0c"
-  integrity sha512-zjjwQ8mNdukZuo3dKlkHeSDYaE4kVxCdJFETdh/AzpvOOhf6b1MM0kto9J5M1qxztTAZ3c7+SDCBV4lAVN+eQA==
-  dependencies:
-    "@sl-design-system/icon" "1.0.1"
-
-"@sl-design-system/select@*", "@sl-design-system/select@^1.0.1":
+"@sl-design-system/inline-message@^1.0.1":
   version "1.0.1"
-  resolved "https://npm.pkg.github.com/download/@sl-design-system/select/1.0.1/c888d01a2697d0bcaba7aae4c3a0857a88a1e571"
-  integrity sha512-4xsV3qZq0Bfz9A7wCueF9tQp03SXCzDV19uzf2vcNs3yfKI8AXijOQEBaNZ8c8E8r13qdQXfiDJpHKaVzhVP7Q==
+  resolved "https://npm.pkg.github.com/download/@sl-design-system/inline-message/1.0.1/183ee02bb02d5f2ad0ba59ad59bf6f1b08597d1b"
+  integrity sha512-KDGY6/49Rkpp4z4TrT7nCtPblV2i6oiMF5jhJ5O+zxrXqZpZZNvAgaApN/Xnb1j3mFW8cdswSfv7FA9pnMMl2w==
   dependencies:
-    "@sl-design-system/form" "^1.0.2"
-    "@sl-design-system/icon" "^1.0.0"
-    "@sl-design-system/shared" "^0.2.12"
+    "@sl-design-system/button" "^1.0.3"
+    "@sl-design-system/icon" "^1.0.2"
+    "@sl-design-system/shared" "^0.3.0"
 
-"@sl-design-system/shared@^0.2.11", "@sl-design-system/shared@^0.2.12", "@sl-design-system/shared@^0.2.13":
-  version "0.2.13"
-  resolved "https://npm.pkg.github.com/download/@sl-design-system/shared/0.2.13/5218f5df1bb5f3d824bbe77257cb22f95bbb0165"
-  integrity sha512-eh2bRyUTQv6fSLhH52N73PlVz02p2nlc+PDyRL1b9FNtn//Wj+QZjNv/6Hq15vqrfsGjo82bWIl8GB3FpQ6HwQ==
+"@sl-design-system/radio-group@^1.0.1", "@sl-design-system/radio-group@1.0.1":
+  version "1.0.1"
+  resolved "https://npm.pkg.github.com/download/@sl-design-system/radio-group/1.0.1/cddbf8f74894c85312632a346cc587d898409896"
+  integrity sha512-bsd5YgUa4q2sI58usd634kYovVJaLVCJOHW4tj4Cdh8NVJy8Ihj7jhBCaLhVQO4g3grDLBwDQDN7FYOO3G+4Pg==
+  dependencies:
+    "@sl-design-system/form" "^1.0.3"
+    "@sl-design-system/shared" "^0.3.0"
+
+"@sl-design-system/sanoma-learning@^0.3.10":
+  version "0.3.10"
+  resolved "https://npm.pkg.github.com/download/@sl-design-system/sanoma-learning/0.3.10/9945e0eea374e79032ac9c796969b2fbd318321a"
+  integrity sha512-bswZiR5otY0bdWcmMq4N8gx9eHvXkCvcneeK+kn8QsAQaqmFozCyvSqtDy5mE+7KTH4dyqR3F9lDj/9ufDYj0w==
+  dependencies:
+    "@sl-design-system/icon" "1.0.2"
+
+"@sl-design-system/select@^1.1.0", "@sl-design-system/select@1.1.0":
+  version "1.1.0"
+  resolved "https://npm.pkg.github.com/download/@sl-design-system/select/1.1.0/356003079371f318ab77b4cdce54ff6301e998cb"
+  integrity sha512-cAzqV2nbDM351Kn4evDMFDS2KdKFVknNEWTLpVN4lm2O//iUjJMM/Sexeoi58BMfGANntBYCOql0NdCqRVg6lA==
+  dependencies:
+    "@sl-design-system/form" "^1.0.3"
+    "@sl-design-system/icon" "^1.0.2"
+    "@sl-design-system/shared" "^0.3.0"
+
+"@sl-design-system/shared@^0.3.0":
+  version "0.3.0"
+  resolved "https://npm.pkg.github.com/download/@sl-design-system/shared/0.3.0/59e11d5ce5ec0d8a837082bb15af3eb28dcbcfa1"
+  integrity sha512-aSar3ZhHo3Xo8MIU8RgIbs3GuWKid0j9e6kCHFXiVP+qv/99gPeZAqOoBz/9NO6KFUHLA/MTf5V2NgKR/54ryw==
 
 "@sl-design-system/shared@0.2.11":
   version "0.2.11"
   resolved "https://npm.pkg.github.com/download/@sl-design-system/shared/0.2.11/ee3303e5ae984ca01fbe157e42af1cca0c80c499"
   integrity sha512-2sEsUDtLAY8ptfzPS3i4CQah2Xf0nqQjMi9mF3Hm8KMspFUAo+bXZYUof8/xIiqLCRJ7ofPW4V1WKdGaXAXwtA==
 
-"@sl-design-system/switch@*", "@sl-design-system/switch@^1.0.1":
+"@sl-design-system/switch@^1.0.2", "@sl-design-system/switch@1.0.2":
+  version "1.0.2"
+  resolved "https://npm.pkg.github.com/download/@sl-design-system/switch/1.0.2/3e4fc2ed77471ee63787bcc47f4257eb4c988bf1"
+  integrity sha512-Yzsa0nLMi0A9HaCanGN/N+H2/axUgtM+isWQbGpDGeZ4UYtx2chWn6nknR1M8MEpgXj0rvh5JzVr+NvgXzYVvg==
+  dependencies:
+    "@sl-design-system/form" "^1.0.3"
+    "@sl-design-system/icon" "^1.0.2"
+    "@sl-design-system/shared" "^0.3.0"
+
+"@sl-design-system/text-area@1.0.1":
   version "1.0.1"
-  resolved "https://npm.pkg.github.com/download/@sl-design-system/switch/1.0.1/6cefddfcf2e595eefe9fe019c6867e3327bc579a"
-  integrity sha512-AGrePUSAvd8leKF4L7UJMJ9N2P+QkTmSEzPORDadUatDw5KZd56useh1HBzhG9n1smJgTW5rh/e8FgZmwXemTQ==
+  resolved "https://npm.pkg.github.com/download/@sl-design-system/text-area/1.0.1/4d4775610667769a1072ebc787b3e2245cda0fcb"
+  integrity sha512-2VqvfRoTqAoSa1sE3cppicFUSyT7NMJ1tBOrEUdxfnQ/clOxiZhij+FZLI11uG/sIbP2Pbo79AjJ9BDcpgGxxQ==
   dependencies:
-    "@sl-design-system/form" "^1.0.2"
-    "@sl-design-system/icon" "^1.0.0"
-    "@sl-design-system/shared" "^0.2.12"
+    "@sl-design-system/form" "^1.0.3"
+    "@sl-design-system/icon" "^1.0.2"
+    "@sl-design-system/shared" "^0.3.0"
 
-"@sl-design-system/text-area@*":
-  version "1.0.0"
-  resolved "https://npm.pkg.github.com/download/@sl-design-system/text-area/1.0.0/6249c3a2cca59d5f713a8086acdb6049dece9a0b"
-  integrity sha512-h10Q6TVRq00hBgPpfaqOQFOypyUoy7U+9zY+tYV2BzYRyFxAt6shoOm71WJBsRc9GEQuFgGcbiweHNH3ZDYSVg==
+"@sl-design-system/text-field@^1.3.5", "@sl-design-system/text-field@1.3.5":
+  version "1.3.5"
+  resolved "https://npm.pkg.github.com/download/@sl-design-system/text-field/1.3.5/8b12e1afacf1f81c40dd583b5ad8f4f7ec990be1"
+  integrity sha512-MBSRJFgQ+Q/oip2CWHLTOIuzE3xqUxNE/jz7u3kL23GSiA+OY45Akc1w0dVMTesAuDKauNjIXWCPWTSjcGgp2Q==
   dependencies:
-    "@sl-design-system/form" "^1.0.0"
-    "@sl-design-system/icon" "^1.0.0"
-    "@sl-design-system/shared" "^0.2.11"
-
-"@sl-design-system/text-field@*", "@sl-design-system/text-field@^1.3.4":
-  version "1.3.4"
-  resolved "https://npm.pkg.github.com/download/@sl-design-system/text-field/1.3.4/193e2336bd249bb6ba7480004552365107edf673"
-  integrity sha512-cfzk6N6nA4VEAl32QUgm3Jr6HiTmsYDZsrfSgTB6EYZLUcWjzWz2y7Mit5khHubRtmFmUpAy3+LibvZ8UojrFA==
-  dependencies:
-    "@sl-design-system/form" "^1.0.2"
-    "@sl-design-system/icon" "^1.0.0"
-    "@sl-design-system/shared" "^0.2.12"
+    "@sl-design-system/form" "^1.0.3"
+    "@sl-design-system/icon" "^1.0.2"
+    "@sl-design-system/shared" "^0.3.0"
 
 "@sl-design-system/textarea@^0.1.24":
   version "0.1.24"
@@ -1696,12 +1698,12 @@
     "@sl-design-system/icon" "0.0.10"
     "@sl-design-system/shared" "0.2.11"
 
-"@sl-design-system/tooltip@^1.0.1":
-  version "1.0.1"
-  resolved "https://npm.pkg.github.com/download/@sl-design-system/tooltip/1.0.1/83c873cd92833f7ec6e515f10c69f2dc26b7d7f3"
-  integrity sha512-Hr+hbQuoMZPiJZGgm5bGJCiOKefXrBnoHfI2uR55ZjuKnE2ZbmV/aV5mZq/+zWbYO9DrgIHB5vVO9dm+8JOqSw==
+"@sl-design-system/tooltip@^1.1.0":
+  version "1.1.0"
+  resolved "https://npm.pkg.github.com/download/@sl-design-system/tooltip/1.1.0/e3920f004c7ff0ecac429a72c62d73ee948a6feb"
+  integrity sha512-O5tqQcdip9edmHCV66WiUOjHsQ7tfHZ1H47RHUW7p/HVyHuuEPunkMLAOIuMKcBgKD8MXAMqEhd8HBzoDhZyVQ==
   dependencies:
-    "@sl-design-system/shared" "^0.2.12"
+    "@sl-design-system/shared" "^0.3.0"
 
 "@socket.io/component-emitter@~3.1.0":
   version "3.1.0"
@@ -4220,7 +4222,7 @@ lit-html@^3.2.0:
   dependencies:
     "@types/trusted-types" "^2.0.2"
 
-"lit@^2.0.0 || ^3.0.0", lit@^3.0.0, lit@^3.1.2, lit@^3.1.4:
+lit@^3.0.0, lit@^3.1.2, lit@^3.1.4, lit@^3.2.0:
   version "3.2.0"
   resolved "https://registry.npmjs.org/lit/-/lit-3.2.0.tgz"
   integrity sha512-s6tI33Lf6VpDu7u4YqsSX78D28bYQulM+VAzsGch4fx2H0eLZnJsUBsPWmGYSGoKDNbjtRv02rio1o+UdPVwvw==
