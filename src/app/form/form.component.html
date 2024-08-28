@@ -1,0 +1,55 @@
+<section>
+<sl-form [formGroup]="formGroup">
+    <h1>Example form</h1>
+    <sl-form-field label="Text field">
+      <sl-text-field formControlName="textField"></sl-text-field>
+    </sl-form-field>
+
+    <sl-form-field label="Checkbox">
+      <sl-checkbox formControlName="checkbox" value="checked" (sl-change)="clickCheckbox($event)">Checkbox</sl-checkbox>
+    </sl-form-field>
+
+    <sl-form-field label="Select">
+      <sl-select formControlName="select">
+        <sl-select-option value="1">Option 1</sl-select-option>
+        <sl-select-option value="2">Option 2</sl-select-option>
+        <sl-select-option value="3">Option 3</sl-select-option>
+      </sl-select>
+    </sl-form-field>
+
+    <sl-form-field label="Checkbox group">
+      <sl-checkbox-group formControlName="checkboxGroup">
+        <sl-checkbox value="0">One</sl-checkbox>
+        <sl-checkbox value="1">Two</sl-checkbox>
+        <sl-checkbox value="2">Three</sl-checkbox>
+      </sl-checkbox-group>
+    </sl-form-field>
+
+    <sl-form-field label="Radio group">
+      <sl-radio-group formControlName="radioGroup">
+        <sl-radio value="1">One</sl-radio>
+        <sl-radio value="2">Two</sl-radio>
+        <sl-radio value="3">Three</sl-radio>
+      </sl-radio-group>
+    </sl-form-field>
+  </sl-form>
+  <pre>{{ formGroup.value | json}}</pre>
+</section>
+
+<section>
+  <sl-form #test [formGroup]="formGroupTest">
+    <h1>Dynamic form</h1>
+    <ul formArrayName="comments">
+      <li *ngFor="let comment of comments.controls, let i = index">
+        <sl-form-field [label]="'Comment '+(i+1)">
+        <sl-text-field [formControlName]="i"></sl-text-field>
+        </sl-form-field>
+      </li>
+    </ul>
+
+    <sl-button-bar>
+      <sl-button [attr.disabled]="formGroupTest.invalid || null" (click)="addComment()">Add comment</sl-button>
+    </sl-button-bar>
+  </sl-form>
+  <pre>{{ formGroupTest.value | json }}</pre>
+  </section>
