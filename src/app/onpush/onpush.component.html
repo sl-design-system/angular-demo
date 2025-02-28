@@ -33,7 +33,16 @@
 <!--    checkbox group:-->
 <!--    {{ formGroup.controls.checkboxGroup | json }}-->
 
-<!--    test?-->
-<!--    {{ test }}-->
+    test?
+    {{ test }}
   </div>
+
+  <form [formGroup]="formGroup1">
+    <input id="input1" formControlName="checkbox1" type="checkbox" (click)="clickCheckbox($event)" required />
+    <label for="input1">My checkbox test</label>
+  </form>
+
+  <pre>{{ formGroup1.value | json}}</pre>
+  <pre>{{ formGroup1.invalid | json}}</pre>
+  <sl-button [attr.disabled]="formGroup1.invalid || null" (click)="addComment()">Disabled when invalid</sl-button>
 </section>
