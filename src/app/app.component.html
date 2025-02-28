@@ -9,6 +9,7 @@
     <a routerLink="" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
     <a routerLink="/form" routerLinkActive="active" ariaCurrentWhenActive="page">Form</a>
     <a routerLink="/icons" routerLinkActive="active" ariaCurrentWhenActive="page">Icons</a>
+    <a routerLink="/onpush" routerLinkActive="active" ariaCurrentWhenActive="page">OnPush</a>
   </nav>
 
   <div *ngIf="!!query; else home">
@@ -19,7 +20,7 @@
       <div class="skeleton" style="--w:40%; --m:3rem"></div>
     </ng-container>
   </div>
-  
+
   <ng-template #home>
     <router-outlet></router-outlet>
   </ng-template>
