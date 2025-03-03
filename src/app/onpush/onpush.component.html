@@ -8,13 +8,13 @@
       <sl-checkbox formControlName="checkbox" value="checked" (sl-change)="clickCheckbox($event)">Checkbox</sl-checkbox>
     </sl-form-field>
 
-    <sl-form-field label="Checkbox group">
+<!--    <sl-form-field label="Checkbox group">
       <sl-checkbox-group formControlName="checkboxGroup">
         <sl-checkbox value="0">One</sl-checkbox>
         <sl-checkbox value="1">Two</sl-checkbox>
         <sl-checkbox value="2">Three</sl-checkbox>
       </sl-checkbox-group>
-    </sl-form-field>
+    </sl-form-field>-->
 
     <sl-button-bar>
       <sl-button [attr.disabled]="formGroup.invalid || null" (click)="addComment()">Send</sl-button>
@@ -45,4 +45,17 @@
   <pre>{{ formGroup1.value | json}}</pre>
   <pre>{{ formGroup1.invalid | json}}</pre>
   <sl-button [attr.disabled]="formGroup1.invalid || null" (click)="addComment()">Disabled when invalid</sl-button>
+
+<!--
+  <mat-checkbox class="example-margin" [(ngModel)]="checked">Checked</mat-checkbox>
+-->
+</section>
+
+<section [formGroup]="toppings">
+  <mat-checkbox formControlName="pepperoni" required>Pepperoni</mat-checkbox>
+  <sl-button fill="solid" [attr.disabled]="toppings.controls.pepperoni.invalid || null" (click)="addComment()">Disabled when Pepperoni invalid</sl-button>
+  <sl-button fill="outline" [attr.disabled]="toppings.invalid || null" (click)="addComment()">Disabled when Pepperoni invalid</sl-button>
+  <pre>{{ toppings.value | json}}</pre>
+  <pre>{{ toppings.controls.pepperoni.invalid | json}}</pre>
+  <pre>{{ toppings.invalid | json}}</pre>
 </section>

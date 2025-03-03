@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, HostListener} from '@angular/core';
+import {ChangeDetectionStrategy, Component, HostListener, inject, model, OnChanges, SimpleChanges} from '@angular/core';
 import {ButtonBarComponent} from "@sl-design-system/angular/button-bar";
 import {ButtonComponent} from "@sl-design-system/angular/button";
 import {CheckboxComponent, CheckboxGroupComponent} from "@sl-design-system/angular/checkbox";
@@ -7,33 +7,53 @@ import {
   CheckboxGroupDirective
 } from "@sl-design-system/angular/forms";
 import {FormComponent, FormFieldComponent} from "@sl-design-system/angular/form";
-import {JsonPipe, NgForOf, NgIf} from "@angular/common";
-import {FormArray, FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
+import {CommonModule, JsonPipe, NgForOf, NgIf} from "@angular/common";
+import {
+  FormArray, FormBuilder,
+  FormControl,
+  FormGroup,
+  FormsModule,
+  ReactiveFormsModule,
+  ValidationErrors,
+  Validators
+} from "@angular/forms";
+import {MatCheckboxModule} from "@angular/material/checkbox";
 
 @Component({
   selector: 'app-onpush',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
+    CommonModule,
     ButtonBarComponent,
     ButtonComponent,
     CheckboxComponent,
     CheckboxDirective,
-    CheckboxGroupComponent,
-    CheckboxGroupDirective,
+    // CheckboxGroupComponent,
+    // CheckboxGroupDirective,
     FormComponent,
     FormFieldComponent,
+    FormsModule,
     JsonPipe,
-    NgForOf,
+    // NgForOf,
     ReactiveFormsModule,
-    NgIf
+    NgIf,
+    MatCheckboxModule
   ],
   templateUrl: './onpush.component.html',
   styleUrl: './onpush.component.css'
 })
-export class OnpushComponent {
+export class OnpushComponent implements OnChanges {
   // formGroupTest: FormGroup;
   test: string[] = [];
+
+  // readonly checked = model(false);
+
+  readonly #formBuilder = inject(FormBuilder);
+
+  readonly toppings = this.#formBuilder.group({
+    pepperoni: false
+  });
 
   // @HostListener('sl-change', ['$event.target'])
   // onClick(btn: any) {
@@ -42,7 +62,7 @@ export class OnpushComponent {
 
   formGroup = new FormGroup({
     checkbox: new FormControl('checked', [Validators.required]),
-    checkboxGroup: new FormControl(['0', '1', '2'], [Validators.required]),
+    // checkboxGroup: new FormControl(['0', '1', '2'], [Validators.required]),
   });
 
   // get comments() {
@@ -58,6 +78,10 @@ export class OnpushComponent {
   //   //   comments: new FormArray([new FormControl('', Validators.required)]),
   //   // });
   // }
+
+  ngOnChanges(changes: SimpleChanges) {
+    console.log('changes', changes);
+  }
 
   clickCheckbox(event: Event): void {
     console.log('event', event, event.type, event.eventPhase, event.target,  typeof event.target);
