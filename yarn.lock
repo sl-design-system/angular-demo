@@ -3232,6 +3232,13 @@
   resolved "https://npm.pkg.github.com/download/@sl-design-system/checklist/0.0.2/b5ab326468b3f65f02ac32e452f1edae6aed31f7"
   integrity sha512-/aDT5xW8qO09uvgMxhg8AUkJhSYdMlKdzv33UJVrrnf5i8C2mpJ0cnwr+MbHIGP+hNBHTaoNDNvtXITwb6jpgA==
 
+"@sl-design-system/editorial-suite@^0.1.0":
+  version "0.1.0"
+  resolved "https://npm.pkg.github.com/download/@sl-design-system/editorial-suite/0.1.0/4423388dbae1601f6cd99a90f877e5024568edad#4423388dbae1601f6cd99a90f877e5024568edad"
+  integrity sha512-JWPKDb9Qk3/Nc61EohkxpgPEp9ybsKrDJHK+rjMlF2zUN+LqPuuaw9VaCmznc6mtwZ3a1CUVcofIxOIoi+T6jg==
+  dependencies:
+    "@sl-design-system/icon" "1.1.0"
+
 "@sl-design-system/form@0.0.15":
   version "0.0.15"
   resolved "https://npm.pkg.github.com/download/@sl-design-system/form/0.0.15/ce9d5ff4fc525a67ec099058beb98213f25f43d4"
@@ -3280,13 +3287,6 @@
   dependencies:
     "@sl-design-system/form" "^1.2.0"
     "@sl-design-system/shared" "^0.5.0"
-
-"@sl-design-system/sanoma-learning@^0.4.0":
-  version "0.4.0"
-  resolved "https://npm.pkg.github.com/download/@sl-design-system/sanoma-learning/0.4.0/29a973b18c0e6c428394b2819a7961b1b934a303#29a973b18c0e6c428394b2819a7961b1b934a303"
-  integrity sha512-HfZzvZV+AafmDoKGvvt3kMNBhc7nAq7IKKRh/0XPv3dK+Ud7dRDeWl2QtaX2AgkpoKY6l/VDDzjy+e6feJw06w==
-  dependencies:
-    "@sl-design-system/icon" "1.1.0"
 
 "@sl-design-system/select@^2.0.0":
   version "2.0.0"
