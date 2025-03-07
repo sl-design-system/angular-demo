@@ -18,7 +18,7 @@ export class IconsComponent {
   preLoaded(){
     this.dynamic = 'pinata';
   }
-  
+
   loadOnDemand(){
     Icon.register(faCat);
     this.dynamic = 'fas-cat';
