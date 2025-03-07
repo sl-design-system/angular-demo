@@ -10,5 +10,6 @@ import '@sl-design-system/checklist';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  tabs: string[] = ['lorem', 'ipsum', 'dolor ', 'sit', 'amet', 'consectetur', 'adipiscing', 'sed', 'do', 'eiusmod', 'tempor', 'incididunt', 'ut', 'labore']
   constructor( ) {}
 }

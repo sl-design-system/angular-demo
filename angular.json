@@ -25,7 +25,7 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@sl-design-system/sanoma-learning/light.css",
+              "./node_modules/@sl-design-system/editorial-suite/light.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -85,7 +85,7 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@sl-design-system/sanoma-learning/all.css",
+              "./node_modules/@sl-design-system/editorial-suite/all.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -93,5 +93,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
