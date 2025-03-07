@@ -15,7 +15,7 @@ import { TextFieldComponent } from '@sl-design-system/angular/text-field';
 import { SelectComponent } from '@sl-design-system/angular/select';
 import { RadioComponent, RadioGroupComponent } from '@sl-design-system/angular/radio-group';
 import { CheckboxComponent, CheckboxGroupComponent } from '@sl-design-system/angular/checkbox';
-import { ListboxComponent } from "@sl-design-system/angular/listbox";
+import { OptionComponent} from "@sl-design-system/angular/listbox";
 
 @Component({
   selector: 'app-form',
@@ -36,9 +36,9 @@ import { ListboxComponent } from "@sl-design-system/angular/listbox";
     ReactiveFormsModule,
     SelectComponent,
     SelectDirective,
-    ListboxComponent,
     TextFieldComponent,
-    TextFieldDirective
+    TextFieldDirective,
+    OptionComponent
   ],
   templateUrl: './form.component.html',
   styleUrl: './form.component.css'

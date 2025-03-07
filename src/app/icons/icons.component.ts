@@ -20,7 +20,7 @@ export class IconsComponent {
   }
 
   loadOnDemand(){
-    // Icon.register(faCat);
+    Icon.register(faCat);
     this.dynamic = 'fas-cat';
   }
 }
