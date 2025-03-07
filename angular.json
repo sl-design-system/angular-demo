@@ -85,7 +85,6 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@sl-design-system/editorial-suite/all.css",
               "src/styles.css"
             ],
             "scripts": []
