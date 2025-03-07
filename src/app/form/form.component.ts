@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import {  
+import {
   FormArray,
   FormControl,
   FormGroup,
@@ -12,38 +12,38 @@ import { ButtonBarComponent } from '@sl-design-system/angular/button-bar';
 import { FormFieldComponent } from '@sl-design-system/angular/form';
 import { CheckboxDirective, CheckboxGroupDirective, RadioGroupDirective, SelectDirective, TextFieldDirective } from '@sl-design-system/angular/forms';
 import { TextFieldComponent } from '@sl-design-system/angular/text-field';
-import { SelectOptionComponent, SelectComponent } from '@sl-design-system/angular/select';
+import { SelectComponent } from '@sl-design-system/angular/select';
 import { RadioComponent, RadioGroupComponent } from '@sl-design-system/angular/radio-group';
 import { CheckboxComponent, CheckboxGroupComponent } from '@sl-design-system/angular/checkbox';
+import { OptionComponent} from "@sl-design-system/angular/listbox";
 
 @Component({
   selector: 'app-form',
   standalone: true,
   imports: [
-    ButtonComponent, 
+    ButtonComponent,
     ButtonBarComponent,
     CheckboxComponent,
     CheckboxDirective,
     CheckboxGroupComponent,
     CheckboxGroupDirective,
     CommonModule,
-    FormComponent,
     FormFieldComponent,
-    FormsModule, 
+    FormsModule,
     RadioComponent,
     RadioGroupComponent,
     RadioGroupDirective,
-    ReactiveFormsModule, 
+    ReactiveFormsModule,
     SelectComponent,
     SelectDirective,
-    SelectOptionComponent,
-    TextFieldComponent, 
-    TextFieldDirective
+    TextFieldComponent,
+    TextFieldDirective,
+    OptionComponent
   ],
   templateUrl: './form.component.html',
   styleUrl: './form.component.css'
 })
-export class FormComponent implements OnInit {
+export class FormExampleComponent implements OnInit {
   formGroupTest: FormGroup;
 
   formGroup = new FormGroup({

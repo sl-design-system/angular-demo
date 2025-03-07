@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { FormComponent } from './form/form.component';
+import { FormExampleComponent } from './form/form.component';
 import { IconsComponent } from './icons/icons.component';
 import { OnpushComponent } from './onpush/onpush.component';
 
@@ -11,7 +11,7 @@ export const routes: Routes = [
   },
   {
     path: 'form',
-    component: FormComponent
+    component: FormExampleComponent
   },
   {
     path: 'icons',

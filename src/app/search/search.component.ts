@@ -2,7 +2,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { FormGroup, FormControl, ReactiveFormsModule, Validators, FormsModule } from '@angular/forms';
 import { TextFieldComponent } from '@sl-design-system/angular/text-field';
 import { ButtonComponent } from '@sl-design-system/angular/button';
-import { FormComponent, FormFieldComponent } from '@sl-design-system/angular/form';
+import { FormComponent } from '@sl-design-system/angular/form';
 import { TextFieldDirective } from '@sl-design-system/angular/forms';
 
 
@@ -10,13 +10,12 @@ import { TextFieldDirective } from '@sl-design-system/angular/forms';
   selector: 'app-search',
   standalone: true,
   imports: [
-    ReactiveFormsModule, 
-    FormsModule, 
-    TextFieldComponent, 
-    ButtonComponent, 
+    ReactiveFormsModule,
+    FormsModule,
+    TextFieldComponent,
+    ButtonComponent,
     FormComponent,
-    TextFieldDirective,
-    FormFieldComponent
+    TextFieldDirective
   ],
   templateUrl: './search.component.html',
   styleUrl: './search.component.css'
