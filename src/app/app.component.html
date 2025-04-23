@@ -19,8 +19,16 @@
       <div class="skeleton" style="--w:40%; --m:3rem"></div>
     </ng-container>
   </div>
-  
+
   <ng-template #home>
-    <router-outlet></router-outlet>
+    <sl-tab-group #tabgroup (sl-tab-change)="onTabChange($event)">
+      <sl-tab
+        *ngFor="let tab of tabs"
+        [routerLink]="tab.path"
+      >
+        {{ tab.label }}
+      </sl-tab>
+      <router-outlet></router-outlet>
+    </sl-tab-group>
   </ng-template>
 </div>
