@@ -12,6 +12,7 @@ import '@sl-design-system/checkbox/register.js';
 import '@sl-design-system/form/register.js';
 import '@sl-design-system/radio-group/register.js';
 import '@sl-design-system/tabs/register.js';
+// import '@sl-design-system/angular/tabs/register.js';
 // import { tabs } from 'file:/Users/a.sobczak/IdeaProjects/angular-demo/src/components/packages/components/tabs/src/tabs.js';
 import '@sl-design-system/text-field/register.js';
 import '@sl-design-system/textarea/register.js';

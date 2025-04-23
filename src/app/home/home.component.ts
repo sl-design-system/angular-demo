@@ -1,19 +1,9 @@
 import {Component, CUSTOM_ELEMENTS_SCHEMA, ViewChild} from '@angular/core';
 import '@sl-design-system/checklist';
-import {TabComponent, TabGroupComponent} from "@sl-design-system/angular/tabs";
-import {RouterLink, RouterOutlet} from "@angular/router";
-import {NgForOf} from "@angular/common";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [
-    TabGroupComponent,
-    TabComponent,
-    RouterLink,
-    NgForOf,
-    RouterOutlet
-  ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
