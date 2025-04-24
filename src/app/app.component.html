@@ -5,12 +5,6 @@
   </div>
 </header>
 <div class="content">
-  <nav>
-    <a routerLink="" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
-    <a routerLink="/form" routerLinkActive="active" ariaCurrentWhenActive="page">Form</a>
-    <a routerLink="/icons" routerLinkActive="active" ariaCurrentWhenActive="page">Icons</a>
-  </nav>
-
   <div *ngIf="!!query; else home">
     <h1>Search result for {{query | json}}</h1>
     <ng-container *ngFor="let result of results">
@@ -19,8 +13,16 @@
       <div class="skeleton" style="--w:40%; --m:3rem"></div>
     </ng-container>
   </div>
-  
+
   <ng-template #home>
-    <router-outlet></router-outlet>
+    <sl-tab-group (sl-tab-change)="onTabChange($event)">
+      <sl-tab
+        *ngFor="let tab of tabs"
+        [routerLink]="tab.path"
+      >
+        {{ tab.label }}
+      </sl-tab>
+      <router-outlet></router-outlet>
+    </sl-tab-group>
   </ng-template>
 </div>
