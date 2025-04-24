@@ -1,14 +1,12 @@
 import {
-  AfterViewInit,
   ChangeDetectorRef,
-  Component, ElementRef, OnDestroy, ViewChild,
+  Component,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {ActivatedRoute, Router, RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import { SearchComponent } from './search/search.component';
-import {AvatarComponent} from '@sl-design-system/angular/avatar';
-import {TabComponent, TabGroupComponent} from "@sl-design-system/angular/tabs";
-// import {Tab} from "@sl-design-system/tabs";
+import { AvatarComponent} from '@sl-design-system/angular/avatar';
+import { TabComponent, TabGroupComponent } from '@sl-design-system/angular/tabs';
 
 @Component({
   selector: 'app-root',
@@ -17,9 +15,7 @@ import {TabComponent, TabGroupComponent} from "@sl-design-system/angular/tabs";
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements AfterViewInit, OnDestroy {
-  @ViewChild('tabgroup') tabgroup: TabGroupComponent;  //ElementRef<TabGroupComponent>;
-
+export class AppComponent {
   query = '';
 
   results = Array.from(Array(5)).map((_, i) => i);
@@ -35,47 +31,13 @@ export class AppComponent implements AfterViewInit, OnDestroy {
     {path: '/settings', label: 'Settings'}
   ];
 
-  constructor(
-    private ref: ChangeDetectorRef,
-    private route: ActivatedRoute,
-    private router: Router
-  ) {
-  }
-
-  ngOnInit(): void {
-    // requestAnimationFrame(() => {
-    //   console.log('this.tabGroup', this.tabgroup);
-    //
-    //   this.tabgroup.elRef.nativeElement.addEventListener('sl-tab-change', this.onRouterLinkActive);
-    // })
-    // console.log('this.tabGroup', this.tabgroup);
-    //
-    // this.tabgroup.elRef.nativeElement.addEventListener('sl-tab-change', this.onRouterLinkActive);
-  }
-
-  ngAfterViewInit(): void {
-    console.log('this.tabGroup', this.tabgroup);
-
-    // this.tabgroup.elRef.nativeElement.addEventListener('sl-tab-change', this.onRouterLinkActive);
-  }
-
-  ngOnDestroy(): void {
-    // this.tabgroup?.elRef.nativeElement.removeEventListener('sl-tab-change', this.onRouterLinkActive);
-  }
+  constructor(private ref: ChangeDetectorRef) {}
 
   search(query: string) {
     this.query = query;
   }
 
-  onRouterLinkActive(event: any) {
-    console.log('onRouterLinkActive', event, event.detail, this.tabs[event.detail]);
-    // this.router.navigate([event.detail.tab.value]);
-    // (this.tabs[event.detail] as unknown as Tab).click();
-    // event.target.children[event.detail].click();
-  }
-
   onTabChange(event: any) {
-    console.log('onTabChange', event, this.tabs[event.detail]);
     event.target.children[event.detail].click();
   }
 }
