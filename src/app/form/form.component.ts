@@ -9,13 +9,13 @@ import {
   Validators} from '@angular/forms';
 import { ButtonComponent } from '@sl-design-system/angular/button';
 import { ButtonBarComponent } from '@sl-design-system/angular/button-bar';
-import { FormComponent, FormFieldComponent } from '@sl-design-system/angular/form';
+import { FormFieldComponent } from '@sl-design-system/angular/form';
 import {
   CheckboxDirective,
   CheckboxGroupDirective,
   RadioGroupDirective,
-  SelectDirective, SwitchDirective,
-  TextAreaDirective,
+  SelectDirective,
+  SwitchDirective, TextAreaDirective,
   TextFieldDirective
 } from '@sl-design-system/angular/forms';
 import { TextFieldComponent } from '@sl-design-system/angular/text-field';
@@ -23,14 +23,13 @@ import { SelectComponent } from '@sl-design-system/angular/select';
 import { RadioComponent, RadioGroupComponent } from '@sl-design-system/angular/radio-group';
 import { CheckboxComponent, CheckboxGroupComponent } from '@sl-design-system/angular/checkbox';
 import { OptionComponent} from "@sl-design-system/angular/listbox";
-import {TooltipComponent} from "@sl-design-system/angular/tooltip";
-import {TextAreaComponent} from "@sl-design-system/angular/text-area";
-import {TabComponent} from "@sl-design-system/angular/tabs";
-import {SwitchComponent} from "@sl-design-system/angular/switch";
-import {ProgressBarComponent} from "@sl-design-system/angular/progress-bar";
-import {InlineMessageComponent} from "@sl-design-system/angular/inline-message";
-import {IconComponent} from "@sl-design-system/angular/icon";
-import {SearchFieldComponent} from "@sl-design-system/angular/search-field";
+import { TooltipComponent } from "@sl-design-system/angular/tooltip";
+import { TabComponent } from "@sl-design-system/angular/tabs";
+import { SwitchComponent } from "@sl-design-system/angular/switch";
+import { InlineMessageComponent } from "@sl-design-system/angular/inline-message";
+import { IconComponent } from "@sl-design-system/angular/icon";
+import { ProgressBarComponent } from "@sl-design-system/angular/progress-bar";
+import { TextAreaComponent } from "@sl-design-system/angular/text-area";
 
 @Component({
   selector: 'app-form',
@@ -55,7 +54,7 @@ import {SearchFieldComponent} from "@sl-design-system/angular/search-field";
     TextFieldDirective,
     TooltipComponent,
     OptionComponent,
-    FormComponent,
+    // FormComponent,
     TextAreaComponent,
     TextAreaDirective,
     TabComponent,
@@ -64,8 +63,8 @@ import {SearchFieldComponent} from "@sl-design-system/angular/search-field";
     ProgressBarComponent,
     InlineMessageComponent,
     IconComponent,
-    FormComponent,
-    SearchFieldComponent
+    // FormComponent,
+    // SearchFieldComponent
   ],
   templateUrl: './form.component.html',
   styleUrl: './form.component.css'
