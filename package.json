@@ -24,7 +24,6 @@
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@lit-labs/virtualizer": "^2.1.0",
     "@lit/localize": "^0.12.2",
-    "@oddbird/popover-polyfill": "^0.6.0",
     "@open-wc/scoped-elements": "^3.0.5",
     "@sl-design-system/angular": "^3.1.0",
     "@sl-design-system/avatar": "^1.1.5",
