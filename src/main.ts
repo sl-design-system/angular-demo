@@ -12,7 +12,7 @@ import '@sl-design-system/checkbox/register.js';
 import '@sl-design-system/form/register.js';
 import '@sl-design-system/radio-group/register.js';
 import '@sl-design-system/text-field/register.js';
-import '@sl-design-system/textarea/register.js';
+import '@sl-design-system/text-area/register.js';
 import '@sl-design-system/select/register.js';
 
 bootstrapApplication(AppComponent, appConfig)
